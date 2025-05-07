@@ -1,73 +1,56 @@
-# Welcome to your Lovable project
 
-## Project info
+# Map Coloring Problem Solver
 
-**URL**: https://lovable.dev/projects/9ba420ec-3649-4c52-9ca1-0469e70d4c52
+An interactive web application for exploring the Map Coloring Problem - a classic problem in AI and constraint satisfaction.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- Interactive map editor to create custom maps
+- Sample pre-defined maps (Australia, USA)
+- Visual backtracking algorithm simulation
+- Step-by-step visualization of the solving process
+- Adjustable visualization speed
+- Control over the maximum number of colors used
 
-**Use Lovable**
+## About the Map Coloring Problem
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/9ba420ec-3649-4c52-9ca1-0469e70d4c52) and start prompting.
+The map coloring problem is a classic constraint satisfaction problem where we need to assign colors to different regions on a map such that no adjacent regions share the same color.
 
-Changes made via Lovable will be committed automatically to this repo.
+### Four Color Theorem
 
-**Use your preferred IDE**
+The Four Color Theorem states that any map can be colored using at most four colors, ensuring no adjacent regions share the same color. This theorem was proven in 1976.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Backtracking Algorithm
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+This tool uses a backtracking algorithm to solve the map coloring problem:
 
-Follow these steps:
+1. Start with an uncolored map
+2. Try to color one region at a time with an available color
+3. Check if the coloring violates any constraints (adjacent regions with same color)
+4. If valid, move to the next region
+5. If not valid, try a different color or backtrack to a previous region
+6. Continue until all regions are colored or all possibilities are exhausted
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## How to Use
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+1. Select a sample map or create your own custom map using the editor
+2. Configure the maximum number of colors and animation speed
+3. Click "Start Visualization" to watch the algorithm solve the map coloring problem
+4. Switch between the "Map Editor" and "Solution" tabs to see the final result
 
-# Step 3: Install the necessary dependencies.
-npm i
+## Technical Implementation
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+- Built with React, TypeScript, and Tailwind CSS
+- Uses SVG for map rendering and interaction
+- Implements a backtracking algorithm with visualization
 
-**Edit a file directly in GitHub**
+## Getting Started
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+1. Clone the repository
+2. Install dependencies with `npm install`
+3. Start the development server with `npm run dev`
+4. Open your browser to the local development URL
 
-**Use GitHub Codespaces**
+## License
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/9ba420ec-3649-4c52-9ca1-0469e70d4c52) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+This project is available under the MIT License.
